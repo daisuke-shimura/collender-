@@ -1,0 +1,55 @@
+<h1>Event#index</h1>
+<br>
+<p>現在時刻</p>
+<p><%= @now %></p>
+<%= @now.month %>
+<%= @now.day %>
+<p>昨日</p>
+<p><%= @now.yesterday %></p>
+<p>未来</p>
+<p><%= @now.since(12.days) %></p>
+<hr>
+<%= @date %>
+<%= @date.wday %>
+<br>
+<table>
+  <tr>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th>
+    <th>土曜日</th>
+    <th>日曜日</th>
+  </tr>
+  <tr>
+    <td><%= (@date + (@date.wday)) %></td>
+    <td><%= (@date + (@date.wday + 1)) %></td>
+    <td><%= (@date + (@date.wday + 2)) %></td>
+    <td><%= (@date + (@date.wday + 3)) %></td>
+    <td><%= (@date + (@date.wday + 4)) %></td>
+    <td><%= (@date + (@date.wday + 5)) %></td>
+    <td><%= (@date + (@date.wday + 6)) %></td>
+  </tr>
+</table>
+<hr>
+<table>
+  <tr>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th>
+    <th>土曜日</th>
+    <th>日曜日</th>
+  </tr>
+  <tr>
+    <td><%= (@date + (@date.wday)).month %>月<%= (@date + (@date.wday)).day %>日</td>
+    <td><%= (@date + (@date.wday + 1)).month %>月<%= (@date + (@date.wday + 1)).day %>日</td>
+    <td><%= (@date + (@date.wday + 2)).month %>月<%= (@date + (@date.wday + 2)).day %>日</td>
+    <td><%= (@date + (@date.wday + 3)).month %>月<%= (@date + (@date.wday + 3)).day %>日</td>
+    <td><%= (@date + (@date.wday + 4)).month %>月<%= (@date + (@date.wday + 4)).day %>日</td>
+    <td><%= (@date + (@date.wday + 5)).month %>月<%= (@date + (@date.wday + 5)).day %>日</td>
+    <td><%= (@date + (@date.wday + 6)).month %>月<%= (@date + (@date.wday + 6)).day %>日</td>
+  </tr>
+</table>

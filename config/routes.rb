@@ -2,10 +2,8 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   #get "event/index" => "event#index"
 
-  resources :event, only: [:index]
-
-
-
+  resources :event, only: [:index, :show]
+  resources :week, only: [:show]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

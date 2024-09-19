@@ -35,6 +35,7 @@
 <hr>
 <table>
   <tr>
+    <th></th>
     <th>月曜日</th>
     <th>火曜日</th>
     <th>水曜日</th>
@@ -44,6 +45,7 @@
     <th>日曜日</th>
   </tr>
   <tr>
+    <td><%= link_to "" %></td>
     <td><%= (@date + (8-@date.wday)).month %>月<%= (@date + (8-@date.wday)).day %>日</td>
     <td><%= (@date + (9-@date.wday)).month %>月<%= (@date + (9-@date.wday)).day %>日</td>
     <td><%= (@date + (10-@date.wday)).month %>月<%= (@date + (10-@date.wday)).day %>日</td>
@@ -52,4 +54,25 @@
     <td><%= (@date + (13-@date.wday)).month %>月<%= (@date + (13-@date.wday)).day %>日</td>
     <td><%= (@date + (14-@date.wday)).month %>月<%= (@date + (14-@date.wday)).day %>日</td>
   </tr>
+  <tr>
+    <td><%= link_to "" %></td>
+    <td><%= (@date2 + (8-@date2.wday)).month %>月<%= (@date2 + (8-@date2.wday)).day %>日</td>
+    <td><%= (@date2 + (9-@date2.wday)).month %>月<%= (@date2 + (9-@date2.wday)).day %>日</td>
+    <td><%= (@date2 + (10-@date2.wday)).month %>月<%= (@date2 + (10-@date2.wday)).day %>日</td>
+    <td><%= (@date2 + (11-@date2.wday)).month %>月<%= (@date2 + (11-@date2.wday)).day %>日</td>
+    <td><%= (@date2 + (12-@date2.wday)).month %>月<%= (@date2 + (12-@date2.wday)).day %>日</td>
+    <td><%= (@date2 + (13-@date2.wday)).month %>月<%= (@date2 + (13-@date2.wday)).day %>日</td>
+    <td><%= (@date2 + (14-@date2.wday)).month %>月<%= (@date2 + (14-@date2.wday)).day %>日</td>
+  </tr>
+  <tr>
+    <td><%= link_to "" %></td>
+    <td><%= (@date3 + (8-@date3.wday)).month %>月<%= (@date3 + (8-@date3.wday)).day %>日</td>
+    <td><%= (@date3 + (9-@date3.wday)).month %>月<%= (@date3 + (9-@date3.wday)).day %>日</td>
+    <td><%= (@date3 + (10-@date3.wday)).month %>月<%= (@date3 + (10-@date3.wday)).day %>日</td>
+    <td><%= (@date3 + (11-@date3.wday)).month %>月<%= (@date3 + (11-@date3.wday)).day %>日</td>
+    <td><%= (@date3 + (12-@date3.wday)).month %>月<%= (@date3 + (12-@date3.wday)).day %>日</td>
+    <td><%= (@date3 + (13-@date3.wday)).month %>月<%= (@date3 + (13-@date3.wday)).day %>日</td>
+    <td><%= (@date3 + (14-@date3.wday)).month %>月<%= (@date3 + (14-@date3.wday)).day %>日</td>
+  </tr>
 </table>
+

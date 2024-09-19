@@ -23,13 +23,13 @@
     <th>日曜日</th>
   </tr>
   <tr>
-    <td><%= (@date + (@date.wday)) %></td>
-    <td><%= (@date + (@date.wday + 1)) %></td>
-    <td><%= (@date + (@date.wday + 2)) %></td>
-    <td><%= (@date + (@date.wday + 3)) %></td>
-    <td><%= (@date + (@date.wday + 4)) %></td>
-    <td><%= (@date + (@date.wday + 5)) %></td>
-    <td><%= (@date + (@date.wday + 6)) %></td>
+    <td><%= (@date +(8-@date.wday)) %></td>
+    <td><%= (@date +(9-@date.wday)) %></td>
+    <td><%= (@date +(10-@date.wday)) %></td>
+    <td><%= (@date +(11-@date.wday)) %></td>
+    <td><%= (@date +(12-@date.wday)) %></td>
+    <td><%= (@date +(13-@date.wday)) %></td>
+    <td><%= (@date +(14-@date.wday)) %></td>
   </tr>
 </table>
 <hr>
@@ -44,12 +44,12 @@
     <th>日曜日</th>
   </tr>
   <tr>
-    <td><%= (@date + (@date.wday)).month %>月<%= (@date + (@date.wday)).day %>日</td>
-    <td><%= (@date + (@date.wday + 1)).month %>月<%= (@date + (@date.wday + 1)).day %>日</td>
-    <td><%= (@date + (@date.wday + 2)).month %>月<%= (@date + (@date.wday + 2)).day %>日</td>
-    <td><%= (@date + (@date.wday + 3)).month %>月<%= (@date + (@date.wday + 3)).day %>日</td>
-    <td><%= (@date + (@date.wday + 4)).month %>月<%= (@date + (@date.wday + 4)).day %>日</td>
-    <td><%= (@date + (@date.wday + 5)).month %>月<%= (@date + (@date.wday + 5)).day %>日</td>
-    <td><%= (@date + (@date.wday + 6)).month %>月<%= (@date + (@date.wday + 6)).day %>日</td>
+    <td><%= (@date + (8-@date.wday)).month %>月<%= (@date + (8-@date.wday)).day %>日</td>
+    <td><%= (@date + (9-@date.wday)).month %>月<%= (@date + (9-@date.wday)).day %>日</td>
+    <td><%= (@date + (10-@date.wday)).month %>月<%= (@date + (10-@date.wday)).day %>日</td>
+    <td><%= (@date + (11-@date.wday)).month %>月<%= (@date + (11-@date.wday)).day %>日</td>
+    <td><%= (@date + (12-@date.wday)).month %>月<%= (@date + (12-@date.wday)).day %>日</td>
+    <td><%= (@date + (13-@date.wday)).month %>月<%= (@date + (13-@date.wday)).day %>日</td>
+    <td><%= (@date + (14-@date.wday)).month %>月<%= (@date + (14-@date.wday)).day %>日</td>
   </tr>
 </table>

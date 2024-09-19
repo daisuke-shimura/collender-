@@ -1,3 +1,3 @@
 class Week < ApplicationRecord
-  belong_to :event
+  belongs_to :event
 end

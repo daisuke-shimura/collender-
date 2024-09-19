@@ -45,7 +45,12 @@
     <th>日曜日</th>
   </tr>
   <tr>
-    <td><%= link_to "" %></td>
+    <td>
+      <%= link_to week_path(1) do %>
+        <%= (@date + (8-@date.wday)).month %>月<%= (@date + (8-@date.wday)).day %>日～
+        <%= (@date + (14-@date.wday)).month %>月<%= (@date + (14-@date.wday)).day %>日
+      <% end %>
+    </td>
     <td><%= (@date + (8-@date.wday)).month %>月<%= (@date + (8-@date.wday)).day %>日</td>
     <td><%= (@date + (9-@date.wday)).month %>月<%= (@date + (9-@date.wday)).day %>日</td>
     <td><%= (@date + (10-@date.wday)).month %>月<%= (@date + (10-@date.wday)).day %>日</td>
@@ -55,7 +60,12 @@
     <td><%= (@date + (14-@date.wday)).month %>月<%= (@date + (14-@date.wday)).day %>日</td>
   </tr>
   <tr>
-    <td><%= link_to "" %></td>
+    <td>
+      <%= link_to week_path(2) do %>
+        <%= (@date2 + (8-@date2.wday)).month %>月<%= (@date2 + (8-@date2.wday)).day %>日～
+        <%= (@date2 + (14-@date2.wday)).month %>月<%= (@date2 + (14-@date2.wday)).day %>日
+      <% end %>
+    </td>
     <td><%= (@date2 + (8-@date2.wday)).month %>月<%= (@date2 + (8-@date2.wday)).day %>日</td>
     <td><%= (@date2 + (9-@date2.wday)).month %>月<%= (@date2 + (9-@date2.wday)).day %>日</td>
     <td><%= (@date2 + (10-@date2.wday)).month %>月<%= (@date2 + (10-@date2.wday)).day %>日</td>
@@ -65,7 +75,12 @@
     <td><%= (@date2 + (14-@date2.wday)).month %>月<%= (@date2 + (14-@date2.wday)).day %>日</td>
   </tr>
   <tr>
-    <td><%= link_to "" %></td>
+    <td>
+      <%= link_to week_path(3) do %>
+        <%= (@date3 + (8-@date3.wday)).month %>月<%= (@date3 + (8-@date3.wday)).day %>日～
+        <%= (@date3 + (14-@date3.wday)).month %>月<%= (@date3 + (14-@date3.wday)).day %>日
+      <% end %>
+    </td>
     <td><%= (@date3 + (8-@date3.wday)).month %>月<%= (@date3 + (8-@date3.wday)).day %>日</td>
     <td><%= (@date3 + (9-@date3.wday)).month %>月<%= (@date3 + (9-@date3.wday)).day %>日</td>
     <td><%= (@date3 + (10-@date3.wday)).month %>月<%= (@date3 + (10-@date3.wday)).day %>日</td>

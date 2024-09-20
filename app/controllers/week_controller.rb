@@ -15,11 +15,15 @@ class WeekController < ApplicationController
     redirect_to event_index_path
   end
 
+  def destroy
+    Week.find(params[:id]).destroy
+    redirect_to request.referer
+  end
   
   private
 
   def week_params
-    params.require(:week).permit(:time1)
+    params.require(:week).permit(:time1, :event_id)
   end
 
 end

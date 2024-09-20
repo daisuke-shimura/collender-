@@ -21,7 +21,8 @@
 <%= link_to "戻る", event_index_path %>
 <hr>
 
-    <%= week.each do |t| %>
+    <%= Week.all.each do |t| %>
       <%= t.time1 %>
+      <%= link_to "削除", week_path(t.id), method: :delete %>
     <% end %>
       

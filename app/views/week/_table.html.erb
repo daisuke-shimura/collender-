@@ -23,6 +23,6 @@
 
     <%= Week.all.each do |t| %>
       <%= t.time1 %>
-      <%= link_to "削除", week_path(t.id), method: :delete %>
+      <%= link_to "削除", week_path(t.id), data: { turbo_method: :delete } %>
     <% end %>
       

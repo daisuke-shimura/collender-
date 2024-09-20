@@ -1,6 +1,5 @@
 class EventController < ApplicationController
   def index
-    @now = Time.current
     @date = Date.today
     @date2 = Date.today + 7
     @date3 = Date.today + 14

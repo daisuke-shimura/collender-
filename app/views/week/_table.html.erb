@@ -18,3 +18,10 @@
     <td><%= (date + (14-date.wday)).month %>月<%= (date + (14-date.wday)).day %>日</td>
   </tr>
 </table>
+<%= link_to "戻る", event_index_path %>
+<hr>
+
+    <%= week.each do |t| %>
+      <%= t.time1 %>
+    <% end %>
+      

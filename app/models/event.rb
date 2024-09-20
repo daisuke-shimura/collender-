@@ -1,3 +1,3 @@
 class Event < ApplicationRecord
-  has_many :weeks, dependent: :destroy
+  #has_many :weeks, dependent: :destroy
 end

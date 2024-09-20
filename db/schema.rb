@@ -18,6 +18,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_19_093521) do
 
   create_table "weeks", force: :cascade do |t|
     t.integer "event_id"
+    t.string "time1"
+    t.string "time2"
+    t.string "time3"
+    t.string "time4"
+    t.string "time5"
+    t.string "time6"
+    t.string "time7"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

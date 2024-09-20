@@ -5,7 +5,14 @@
 <hr>
 <% if params[:id] == "1" %>
   1
-  <%= render "table", date: @date %>
+  <%= form_with model: Week.new, url: week_index_path, method: :post do |f| %>
+    <!--%= f.select :time1, [["〇","〇"],["×","×"],["△","△"]], include_blank: "記号を選んでー" %-->
+    <%= f.text_field :time1 %>
+    <%= f.submit "送信" %>
+  <% end %>
+<hr>
+<%= render "table", date: @date, week: @week %>
+
 <% end %>
 
 <% if params[:id] == "2" %>

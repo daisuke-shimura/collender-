@@ -1,4 +1,21 @@
 <h1>Week#show</h1>
 <p>Find me in app/views/week/show.html.erb</p>
 
-<%= @week %>
+<%= @id %>
+<hr>
+<% if params[:id] == "1" %>
+  1
+  <%= render "table", date: @date %>
+<% end %>
+
+<% if params[:id] == "2" %>
+  2
+  <%= render "table", date: @date2 %>  
+<% end %>
+
+<% if params[:id] == "3" %>
+  3
+  <%= render "table", date: @date3 %>
+<% end %>
+
+

@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th>
+    <th>土曜日</th>
+    <th>日曜日</th>
+  </tr>
+  <tr>
+    <td><%= (date + (8-date.wday)).month %>月<%= (date + (8-date.wday)).day %>日</td>
+    <td><%= (date + (9-date.wday)).month %>月<%= (date + (9-date.wday)).day %>日</td>
+    <td><%= (date + (10-date.wday)).month %>月<%= (date + (10-date.wday)).day %>日</td>
+    <td><%= (date + (11-date.wday)).month %>月<%= (date + (11-date.wday)).day %>日</td>
+    <td><%= (date + (12-date.wday)).month %>月<%= (date + (12-date.wday)).day %>日</td>
+    <td><%= (date + (13-date.wday)).month %>月<%= (date + (13-date.wday)).day %>日</td>
+    <td><%= (date + (14-date.wday)).month %>月<%= (date + (14-date.wday)).day %>日</td>
+  </tr>
+</table>

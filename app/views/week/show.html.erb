@@ -2,6 +2,7 @@
 <p>Find me in app/views/week/show.html.erb</p>
 
 <%= @id %>
+<%= Event.find(params[:id]).id %>
 <hr>
 <% if params[:id] == "1" %>
   1
@@ -13,6 +14,8 @@
 <%= render "table", date: @date, week: @week %>
 <hr>
 <%= link_to "更新",request.referer %>
+<%= Event.all.each do |t| %>
+<% end %>
 
 <% end %>
 

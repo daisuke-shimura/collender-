@@ -1,5 +1,25 @@
 <h1>Event#index</h1>
 <br>
+<%= form_with model: Event.new, url: event_index_path, method: :post do |f| %>
+  <%= f.date_field :start %>
+  <%= f.date_field :finish %>
+  <%= f.submit "送信"%>
+<% end %>
+<br>
+<% @event.each do |event| %>
+  <table>
+    <tr>
+      <td>
+        <%= link_to week_path(event.id) do %>
+          <%= event.start %>
+          ～
+          <%= event.finish %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+<hr>
 <table>
   <tr>
     <th>月曜日</th>

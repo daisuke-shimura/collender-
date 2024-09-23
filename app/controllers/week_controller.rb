@@ -1,6 +1,9 @@
 class WeekController < ApplicationController
+
+
   def show
     @id = params[:id]
+
     @week = Week.all
     @date = Date.today
     @date2 = Date.today + 7
@@ -12,7 +15,7 @@ class WeekController < ApplicationController
     @week = Week.new(week_params)
     @week.event_id = params[:id]
     @week.save!
-    redirect_to event_index_path
+    redirect_to request.referer
   end
 
   def destroy

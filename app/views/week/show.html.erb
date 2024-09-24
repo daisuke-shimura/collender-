@@ -1,15 +1,25 @@
 <h1>Week#show</h1>
 <p>Find me in app/views/week/show.html.erb</p>
+<%= link_to "戻る", event_index_path %>
+<hr>
 
 <%= @id %>
 <%= Event.find(params[:id]).id %>
-<hr>
-<% if params[:id] == "1" %>
-  1
-  <%= form_with model: Week.new, url: week_index_path, method: :post do |f| %>
+<%= form_with model: Week.new, url: week_index_path, method: :post do |f| %>
     <%= f.select :time1, [["〇","〇"],["×","×"],["△","△"]], include_blank: "記号を選んでー" %>
     <%= f.submit "送信" %>
+<% end %>
+<%= Week.all.each do |t| %>
+  <%= link_to event_path(t.id) do %>
+    <%= t.time1 %>
   <% end %>
+  　<%= link_to "削除", week_path(t.id), data: { turbo_method: :delete } %>
+    <br>
+<% end %>
+<hr>
+
+<% if params[:id] == "1" %>
+  1
 <hr>
 <%= render "table", date: @date, week: @week %>
 <hr>

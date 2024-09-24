@@ -12,9 +12,9 @@ class WeekController < ApplicationController
 
   def create
     week = Week.new(week_params)
-    week.event_id = Event.find(params[:event_id]).id
-    week.save
-    redirect_to event_index_path
+    #week.event_id = Event.find(params[:event_id]).id
+    week.save!
+    redirect_to request.referer
   end
 
   def destroy

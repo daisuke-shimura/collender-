@@ -1,0 +1,4 @@
+<h1><%= @week.id %>のページ</h1>
+<br>
+<%= @week.time1 %>
+<%= link_to "削除", week_path(@week.id), data: { turbo_method: :delete } %>

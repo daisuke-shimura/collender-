@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   #get "event/index" => "event#index"
 
   resources :event, only: [:index, :show, :create, :destroy]
-  resources :week, only: [:show, :create, :destroy]
+  resources :week, only: [:show, :create, :destroy] do
+    resources :comment, only: [:create, :destroy]
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

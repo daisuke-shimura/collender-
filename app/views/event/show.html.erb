@@ -2,3 +2,12 @@
 <br>
 <%= @week.time1 %>
 <%= link_to "削除", week_path(@week.id), data: { turbo_method: :delete } %>
+<hr>
+<% @week.comments.each do |comment| %>
+  <% comment.comment %>
+<% end %>
+<br>
+<%= form_with model:[@week, Comment.new], url:week_comment_index_path(@week.id), method: :post do |f| %>
+  <%= f.text_area :comment, placeholder: "ここに書いてね" %>
+  <%= f.submit "送信" %>
+<% end %>
